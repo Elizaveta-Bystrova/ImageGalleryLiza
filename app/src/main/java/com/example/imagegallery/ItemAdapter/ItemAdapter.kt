@@ -1,13 +1,16 @@
 package com.example.imagegallery.ItemAdapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.view.menu.MenuView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imagegallery.R
+import com.example.imagegallery.model.DetaleActivity
 import com.example.imagegallery.model.Images
 
 class ItemAdapter(private val context:Context,
@@ -25,6 +28,10 @@ class ItemAdapter(private val context:Context,
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         val item = dataSet[position]
         holder.imageView.setImageResource(item.imageResourceId)
+        holder.imageView.setOnClickListener {
+            val intent = Intent(context, DetaleActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
