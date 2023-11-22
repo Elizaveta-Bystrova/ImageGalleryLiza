@@ -9,8 +9,8 @@ import com.example.imagegallery.R
 class PictureScreenActivity : AppCompatActivity()  {
     lateinit var textView: TextView
     lateinit var imageView: ImageView
-    private val texts = arrayOf(R.string.picture_1, R.string.picture_2, R.string.picture_3, R.string.picture_4, R.string.picture_5, R.string.picture_6, R.string.picture_7, R.string.picture_8, R.string.picture_9)
-    private val pictures = arrayOf(R.drawable.image1_1, R.drawable.image2_2, R.drawable.image3_3, R.drawable.image4_4, R.drawable.image5_5, R.drawable.image6_6, R.drawable.image7_7, R.drawable.image8_8, R.drawable.image9_9)
+    private val texts = arrayOf(R.string.picture_1, R.string.picture_2, R.string.picture_3, R.string.picture_4, R.string.picture_5, R.string.picture_6, R.string.picture_7, R.string.picture_8, R.string.picture_9, R.string.picture_10)
+    private val pictures = arrayOf(R.drawable.image1_1, R.drawable.image2_2, R.drawable.image3_3, R.drawable.image4_4, R.drawable.image5_5, R.drawable.image6_6, R.drawable.image7_7, R.drawable.image8_8, R.drawable.image9_9, R.drawable.image10_10)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.image_screen)
