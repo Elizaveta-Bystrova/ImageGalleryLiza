@@ -1,11 +1,14 @@
 package com.example.imagegallery
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imagegallery.ItemAdapter.ItemAdapter
 import com.example.imagegallery.dataSource.dataSource
+import com.example.imagegallery.model.PictureScreenActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +25,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         adapter.setOnItemClickListener(object: ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
-
+//                Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, PictureScreenActivity::class.java)
+                startActivity(intent)
             }
 
     })
@@ -32,7 +36,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView2.adapter = adapter2
         adapter2.setOnItemClickListener(object: ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, PictureScreenActivity::class.java)
+                intent.putExtra("image_number", position)
+                startActivity(intent)
 
             }
         })
@@ -41,7 +48,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView3.adapter = adapter3
         adapter3.setOnItemClickListener(object: ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
+                // Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, PictureScreenActivity::class.java)
+                startActivity(intent)
 
             }
 
